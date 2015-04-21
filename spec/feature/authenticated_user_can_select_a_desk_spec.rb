@@ -10,9 +10,10 @@ RSpec.describe "authenticated user", :type => :feature do
     fill_in "user_first_name", with: "rolando"
     fill_in "user_last_name", with: "navarrete"
     click_on "Create User"
+    save_and_open_page
     expect(page).to have_content("rolando")
     expect(page).to have_content("Choose your desk")
-    choose('A Radio Button')
-    expect(page).to have_content("Thanks for choosing your desk Building Blocks loves you")
+    choose('basic')
+    click_on "Submit desk selection"
   end
 end

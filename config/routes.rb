@@ -6,7 +6,10 @@ Rails.application.routes.draw do
   # root 'welcome#index'
   get "/signup" => "users#new"
   post "/users" => "users#create"
-  root "pages#user_dashboard"
+  patch "/users" => "users#update", as: :user
+  root "pages#home"
+  get "/home" => "pages#home"
+  get "/user_dashboard" => "pages#user_dashboard"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
