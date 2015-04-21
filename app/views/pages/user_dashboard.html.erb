@@ -4,9 +4,10 @@
 <%= form_tag("/users", method: "patch") do %>
   <%= radio_button_tag(:basic, "basic") %>
   <%= label_tag(:basic, "Basic Desk") %>
-  <%= radio_button_tag(:age, "adult") %>
-  <%= label_tag(:age_adult, "I'm over 21") %>
+  <%= radio_button_tag(:standing_desk, "standing desk") %>
+  <%= label_tag(:standing_desk, "Standing Desk") %>
+  <%= radio_button_tag(:mega_desk, "Mega Desk") %>
+  <%= label_tag(:mega_desk, "Mega Desk") %>
   <%= label_tag(:q, "Regular Desk:") %>
-  <%= text_field_tag(:q) %>
   <%= submit_tag("Submit desk selection") %>
 <% end %>
