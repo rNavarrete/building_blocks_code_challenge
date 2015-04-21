@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  def home
+  def user_dashboard
 
   end
 end
