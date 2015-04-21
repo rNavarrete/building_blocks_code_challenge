@@ -14,7 +14,6 @@ class UsersController < ApplicationController
   end
 
   def update
-    byebug
   end
 
   def user_params
