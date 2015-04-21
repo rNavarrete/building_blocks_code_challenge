@@ -1,0 +1,9 @@
+<%= simple_form_for @user do |f| %>
+  <%= f.input :email, id: "email" %>
+  <%= f.input :first_name, id: "first_name" %>
+  <%= f.input :last_name, id: "last_name" %>
+  <%= f.input :username, id: "username" %>
+  <%= f.input :password, id: "user_password" %>
+  <%= f.input :password_confirmation, id: "user_password_confirmation" %>
+  <%= f.button :submit %>
+<% end %>

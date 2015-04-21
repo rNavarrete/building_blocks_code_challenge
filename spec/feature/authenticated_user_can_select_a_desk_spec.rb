@@ -14,6 +14,5 @@ RSpec.describe "authenticated user", :type => :feature do
     expect(page).to have_content("Choose your desk")
     choose('A Radio Button')
     expect(page).to have_content("Thanks for choosing your desk Building Blocks loves you")
-    
   end
 end
