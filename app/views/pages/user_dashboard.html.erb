@@ -2,12 +2,11 @@
 <h2> "Choose your desk" </h2>
 
 <%= form_tag("/users", method: "patch") do %>
-  <%= radio_button_tag(:basic, "basic") %>
   <%= label_tag(:basic, "Basic Desk") %>
-  <%= radio_button_tag(:standing_desk, "standing desk") %>
+  <%= radio_button_tag(:user, {"desk_preference" => "Basic"}) %>
   <%= label_tag(:standing_desk, "Standing Desk") %>
-  <%= radio_button_tag(:mega_desk, "Mega Desk") %>
+  <%= radio_button_tag(:standing_desk, {"desk_preference" => "Standing"}) %>
   <%= label_tag(:mega_desk, "Mega Desk") %>
-  <%= label_tag(:q, "Regular Desk:") %>
+  <%= radio_button_tag(:mega_desk, {"desk_preference" => "Mega"}) %>
   <%= submit_tag("Submit desk selection") %>
 <% end %>

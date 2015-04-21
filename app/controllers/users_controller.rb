@@ -14,9 +14,14 @@ class UsersController < ApplicationController
   end
 
   def update
+    if current_user
+      current_user.update((params[:user].to_hash_object))
+    else
+      redirect_to root_path
+    end
   end
 
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :email, :username, :password, :password_confirmation)
+    params.require(:user).permit(:first_name, :last_name, :email, :username, :password, :password_confirmation, :desk_selection)
   end
 end
