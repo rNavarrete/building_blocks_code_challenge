@@ -16,7 +16,10 @@ class UsersController < ApplicationController
   def update
     if current_user
       current_user.update((params[:user].to_hash_object))
+      flash[:success] = "Hey thanks for picking a desk, you selected the #{current_user.desk_preference.downcase} desk, remember Building Blocks loves you."
+      redirect_to root_path
     else
+      flash[:error] = "Something went wrong, how did that happen?"
       redirect_to root_path
     end
   end
