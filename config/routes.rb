@@ -14,13 +14,17 @@ Rails.application.routes.draw do
  
   get "/home" => "pages#home"
  
-  get "/user_dashboard" => "pages#user_dashboard"
+  get "/user_dashboard" => "pages#dashboard"
   
   get "/login" => "sessions#new"
 
   post "/login" => "sessions#create"
 
   delete "/logout" => "sessions#delete"
+
+  namespace :admin do
+    get "/dashboard" => "pages#dashboard"
+  end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
