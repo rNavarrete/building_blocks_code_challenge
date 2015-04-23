@@ -1,1 +1,10 @@
 <h1>"This is the home page"</h1>
+
+<%= form_for(:session, url: login_path) do |f| %>
+  <%= f.label :email %>
+  <%= f.email_field :user_email, id: "user_email" %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password, id: "user_password" %>
+  <%= f.submit "Sign In", class: "btn btn-primary" %>
+<% end %>

@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  def sign_in
+  def new
     redirect_to root_path
   end
 end

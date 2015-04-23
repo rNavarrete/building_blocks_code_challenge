@@ -16,7 +16,11 @@ Rails.application.routes.draw do
  
   get "/user_dashboard" => "pages#user_dashboard"
   
-  get "/login" => "sessions#sign_in"
+  get "/login" => "sessions#new"
+
+  post "/login" => "sessions#create"
+
+  delete "/logout" => "sessions#delete"
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
